@@ -14,8 +14,6 @@
     <name>lc-eureka-server</name>
     <description>服务注册与发现</description>
 
-
-
     <dependencies>
 
         <dependency>

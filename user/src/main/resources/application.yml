@@ -4,9 +4,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
-    ip-address: 192.168.12.151
+    #ip-address: 192.168.12.191
 spring:
   application:
     name: user-server
 server:
-  port: 9001
+  port: 9002

@@ -18,6 +18,8 @@
     <modules>
         <module>lc-eureka-server</module>
         <module>user</module>
+        <module>product</module>
+        <module>gateway</module>
     </modules>
 
 
@@ -26,6 +28,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
+        <cloudpro.version>0.0.1-SNAPSHOT</cloudpro.version>
     </properties>
 
     <dependencies>
