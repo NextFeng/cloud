@@ -1,6 +1,7 @@
 package com.lcdz.cloud.user.web;
 
 import com.lcdz.cloud.user.feign.UserService;
+import com.lcdz.cloud.user.tools.GirlConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +23,23 @@ public class UserController {
     private UserService userService;
 
 
+
+    @Autowired
+    private GirlConfig girlConfig;
+
+
     @RequestMapping("/get")
     private String get(HttpServletRequest request){
         String ss = request.getParameter("msg");
         String str = userService.get(ss);
         return str;
+    }
+
+    @RequestMapping("/print")
+    private String print(HttpServletRequest request){
+        String name = girlConfig.getName();
+        Integer age = girlConfig.getAge();
+        return "姓名：" + name + ",年龄：" + age;
     }
 
 

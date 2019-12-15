@@ -2,18 +2,33 @@ spring:
   application:
     name: config-server
   cloud:
+    inetutils:
+      timeout-seconds: 5000
     config:
       server:
         git:
-          uri: http://github.com/NextFeng/cloud_config.git
+          uri: https://github.com/NextFeng/cloud_config.git
           username: 1225842878@qq.com
-          passphrase: Http1024
+          password: Http1024
+          basedir: D:/lcdz/cloud
+          force-pull: true
+  rabbitmq:
+    host: 192.168.0.101
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-
+      defaultZone: http://192.168.0.105:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.0.105
 management:
   endpoints:
     web:
-      expose: "*"
+      exposure:
+        include: refresh,health,info,bus-refresh
+logging:
+  level:
+    org.springframework.cloud.bus: debug

@@ -7,6 +7,7 @@ eureka:
     enable-self-preservation: true
   instance:
     prefer-ip-address: true
+    ip-address: 192.168.0.105
 spring:
   application:
     name: eureka
