@@ -1,13 +1,13 @@
 package com.lcdz.cloud.apis.feign;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * @author QinZhenGuo
  * @date 2019/12/11 15:40
  */
 
-@Service
+@Component
 public class UserClientFallback implements UserClient {
 
     @Override

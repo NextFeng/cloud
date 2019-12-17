@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
+import static java.lang.Thread.sleep;
+
 /**
  * @author QinZhenGuo
  * @date 2019/12/11 10:34
@@ -29,8 +31,9 @@ public class UserController {
 
 
     @RequestMapping("/get")
-    private String get(HttpServletRequest request){
+    private String get(HttpServletRequest request) throws Exception{
         String ss = request.getParameter("msg");
+        sleep(3000);
         String str = userService.get(ss);
         return str;
     }
