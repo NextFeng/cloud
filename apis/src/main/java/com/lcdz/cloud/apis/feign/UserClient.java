@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2019/12/11 11:49
  */
 
-@FeignClient(name = "user",fallback = UserClientFallback.class)
+@FeignClient(name = "user")
 public interface UserClient {
 
     @GetMapping("/get")
     String get(@RequestParam("msg") String msg);
+
 }

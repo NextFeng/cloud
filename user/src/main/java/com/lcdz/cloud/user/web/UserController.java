@@ -33,7 +33,7 @@ public class UserController {
     @RequestMapping("/get")
     private String get(HttpServletRequest request) throws Exception{
         String ss = request.getParameter("msg");
-        sleep(3000);
+        //sleep(3000);
         String str = userService.get(ss);
         return str;
     }

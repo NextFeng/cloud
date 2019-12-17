@@ -1,7 +1,6 @@
 package com.lcdz.cloud.product.web;
 
 import com.lcdz.cloud.apis.feign.UserClient;
-import com.lcdz.cloud.apis.feign.UserClientFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
@@ -9,7 +8,7 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @date 2019/12/12 10:46
  */
 
-@FeignClient(name = "user")
+@FeignClient(name = "user",fallback = UserClientApiFallBack.class)
 public interface UserClientApi extends UserClient {
 
 
