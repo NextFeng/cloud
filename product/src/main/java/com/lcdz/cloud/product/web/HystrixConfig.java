@@ -15,6 +15,8 @@ public class HystrixConfig {
 
     /*高版本以后需要自己映射指定hytrix.stream的请求 */
 
+    //http://localhost:8080/hystrix.stream
+
     @Bean
     public ServletRegistrationBean getServlet() {
         HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();

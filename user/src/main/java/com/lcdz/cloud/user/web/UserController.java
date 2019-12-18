@@ -6,10 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.servlet.http.HttpServletRequest;
-
-import static java.lang.Thread.sleep;
 
 /**
  * @author QinZhenGuo
@@ -33,7 +30,7 @@ public class UserController {
     @RequestMapping("/get")
     private String get(HttpServletRequest request) throws Exception{
         String ss = request.getParameter("msg");
-        //sleep(3000);
+        Thread.sleep(3000);
         String str = userService.get(ss);
         return str;
     }
